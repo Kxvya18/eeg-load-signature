@@ -1,0 +1,22 @@
+__pycache__/
+*.pyc
+.DS_Store
+.ipynb_checkpoints/
+.env
+venv/
+.venv/
+*.log
+*.pdf
+.mplconfig/
+.numba_cache/
+STEW Dataset/
+data/
+datasets/
+raw_data/
+*.edf
+*.fif
+*.set
+*.mat
+*.npy
+*.npz
+stew_tda_results*/

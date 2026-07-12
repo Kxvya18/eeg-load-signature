@@ -1,0 +1,79 @@
+STEW TOPOLOGY ANALYSIS V3
+Paired N after Stage 2 exclusions: 40
+Excluded subjects: [1, 13, 14, 30, 33, 38, 40, 41]
+Normalization mode: unit_diameter
+Window length (s): 4.0
+FC connectivity metric: alpha_envelope_correlation
+IAAFT / phase surrogate count per method: 8
+
+PRIMARY CONFIRMATORY RESULT
+Frontal dynamic alpha-FC topology is the primary branch.
+Frontal FC landscape volatility: RBC=0.799, p_FDR=0.0020 **, p_perm=0.0006
+Rest median=0.0032, Task median=0.0026
+95% bootstrap RBC CI=[0.641, 0.928]
+
+SUPPORTING SINGLE-CHANNEL TOPOLOGY
+O2: RBC=0.907, p_FDR=1.342e-05 ***, p_perm=0.0000
+
+STAGE 3 CHECKS
+- Topology compared directly against conventional alpha power.
+- Partial correlation controlling alpha power computed across all 14 channels.
+- Representative embedded point clouds and persistence diagrams generated for the strongest current channel.
+- Persistence landscapes and persistence images generated from H1 diagrams and summarized at subject level.
+- IAAFT and phase-randomized surrogate controls computed window-by-window to test topology beyond amplitude/spectrum structure.
+- Dynamic volatility features computed from windowwise landscape trajectories.
+- Alpha functional-connectivity topology computed by applying persistent homology to windowed FC distance matrices.
+- Persistent cocycle-derived circular coordinates retained as exploratory phase-geometry outputs only.
+- Classification kept as secondary validation only.
+
+WORK PACKAGE 1
+Best confirmatory landscape channel (AF3): RBC=0.748, p_FDR=0.0259 *
+
+WORK PACKAGE 2
+Best surrogate-resistant channel (FC6): RBC=0.735, p_FDR=0.0332 *
+
+WORK PACKAGE 3
+Best single-channel dynamic landscape (FC6): RBC=0.728, p_FDR=0.0664 †
+
+WORK PACKAGE 4
+Best FC dynamic region (frontal): RBC=0.799, p_FDR=0.0027 **
+
+WORK PACKAGE 5
+Persistent cocycle-based circular coordinates saved as exploratory mechanistic illustrations, not as core confirmatory evidence.
+
+PRIMARY BRANCH CONTROL ANALYSES
+Table21 reports direct comparisons of frontal FC topology against frontal alpha power and frontal FC strength,
+including partial-rank controls and within-subject delta coupling checks.
+
+ROBUSTNESS
+Table22 reports exclusion-sensitivity scenarios, including failed-only, fallback-ASR, and no-exclusion analyses.
+Use repeated reruns across window length, FC metric, and surrogate count with stew_robustness.py for final sensitivity summaries.
+
+DISCOVERY VIEW
+Table23 ranks primary, supporting, and exploratory topology findings so the manuscript can focus on a coherent brain-level pattern.
+Figure11 visualizes group-level frontal alpha-FC structure for the primary topology branch.
+
+EDGE-LEVEL TOPOLOGY DISCOVERY
+Top candidate frontal edge driver: F7-F8 (edge RBC=-0.787, topology-coupling rho=-0.248, role=candidate_state_sensitive_edge).
+Table24 and Figure12 are designed to identify which frontal alpha connections may drive the topology-level effect.
+
+CROSS-ANALYSIS EVIDENCE MAP
+Strongest cross-analysis association with the primary topology delta: frontal dynamic FC topology (rho=1.000, p_FDR=0.0000, ***).
+Table25 and Figure13 connect the primary FC-topology effect to channel, regional, alpha, and topology-family changes.
+
+ENHANCED MACHINE-LEARNING VALIDATION
+Best feature-family model: whole_head / Alpha power (balanced accuracy=0.825, ROC-AUC=0.866, perm p=0.0000, ***).
+Table26 reports balanced accuracy, ROC-AUC, sensitivity, specificity, and confusion counts.
+Table27 reports linear-SVM feature importance stability across LOSO folds.
+
+SUBJECTIVE-RATING RELEVANCE
+Strongest subjective-rating association: Primary frontal FC topology compression (rho=0.402, p_FDR=0.2734, ns).
+Table28 tests whether topology and EEG changes scale with subject-level rating changes.
+
+TOPOLOGY-VECTOR MACHINE LEARNING
+Best vectorized topology representation: Frontal FC persistence image (balanced accuracy=0.613, ROC-AUC=0.640, perm p=0.0760, †).
+Table29 uses persistence landscape/image arrays with PCA inside LOSO cross-validation.
+
+NETWORK NODE-LEVEL DISCOVERY
+Top topology-driver node summary: F7 (candidate edges=1, max driver score=0.588).
+Table30 and Figure17 summarize whether candidate edge drivers converge on specific frontal nodes.

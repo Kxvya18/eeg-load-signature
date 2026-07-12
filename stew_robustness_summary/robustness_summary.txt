@@ -1,0 +1,16 @@
+PRIMARY ROBUSTNESS SUMMARY
+Runs summarized: 6
+Best primary run: stew_output_final_84aec | metric=alpha_envelope_correlation | window=4.0 s | surrogates=8
+Primary effect: RBC=0.799, p_FDR=0.0020, p_perm=0.0006, direction=Rest > Task
+
+Best ML feature-family result:
+stew_output_final_83aec | whole_head / Alpha power | balanced accuracy=0.850, ROC-AUC=0.878, perm p=0.0000
+
+Most frequent top edge-driver candidate:
+FC5-F8 (2 run(s) as top edge)
+
+Best topology-vector ML result:
+stew_output_final_83aec | Frontal channel persistence images | balanced accuracy=0.700, ROC-AUC=0.712, perm p=0.0000
+
+Most frequent node-level driver candidate:
+FC5 (2 run(s) as top node)

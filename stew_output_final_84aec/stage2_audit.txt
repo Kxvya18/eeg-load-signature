@@ -1,0 +1,21 @@
+STAGE 2 AUDIT
+Project root: /Users/boolu/Desktop/simulations/stew
+Input dir: stew_tda_results_final
+Python: 3.10.19
+Normalization mode: unit_diameter
+Preprocessing sequence: ADC_to_microvolts, highpass_1Hz, line_noise_notch_50Hz, ASR_on_subject_low_condition, average_reference, alpha_band_8_13Hz
+Dataset reference: Lim et al. 2018, IEEE TNSRE, PMID 30281467
+Preprocessing reference: Safari et al. 2024, Scientific Reports s41598-024-59652-w
+
+Feature rows read: 96
+Preprocessing rows read: 96
+Unique subjects in features: 48
+Failed subjects from preprocessing log: []
+Residual artefact IQR threshold: 0.0480
+Residual artefact outlier subjects: [1, 13, 14, 30, 33, 38, 40, 41]
+Excluded subjects total: [1, 13, 14, 30, 33, 38, 40, 41]
+Paired N after exclusions: 40
+Subjects present but incomplete after exclusions: []
+
+Implemented outputs in this analysis folder are generated from code in the current run.
+Legacy markdown planning files in the repo are treated as narrative documents, not as evidence of implemented analyses.

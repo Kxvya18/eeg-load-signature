@@ -58,3 +58,15 @@ Consequences for design:
 - NWCF (frozen) and classical topology are weak for load (0.61-0.68 within task, ~chance across tasks).
 - Time leakage (Spearman of score with time-on-task within level) is small and negative (-0.01 to -0.16),
   largest for RIEM/ALL within MATB: decoder outputs drift down with time-on-task.
+
+## 2026-10-07 — M01 minimax task-general load direction (dev N=11, unseen task in S3, K=100 PCA)
+AUC (subject-only LR / pooled LR / pooled LDA / minimax / minimax+time-null):
+- RIEM  matb->nback .635/.649/.673/**.750**/.714 ; nback->matb .713/.833/.813/**.857**/.831
+- ALL   matb->nback .683/.678/.658/**.737**/.707 ; nback->matb .708/**.858**/.817/.855/.834
+- BP    matb->nback .669/.698/.676/**.736**/.721 ; nback->matb .564/**.810**/.746/.736/.731
+- NWCF adds nothing: ALL .737/.855 vs ALL_noNWCF .737/.856; NWCF alone .62/.62. -> NWCF removed from the core
+  method (kept as reported ablation only).
+- Time nulling: exact orthogonality to the estimated time directions (0.000) but residual measured leakage
+  remains (e.g. -0.10 nback->matb) and costs ~0.03 AUC -> secondary component.
+- Certificate problem: convex-hull margin 2.5-2.7 vs realised 1.1-1.3 on the test subject -> the hull assumption
+  does not hold for new people. Fix: conformal (leave-one-subject-out) calibration of the certificate (M02).

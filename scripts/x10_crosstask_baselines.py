@@ -30,6 +30,7 @@ sys.path.insert(0, str(ROOT))
 from eegls.paths import CACHE, DOCS, OUT  # noqa: E402
 
 FAMILIES = ("BP", "APER", "OSC", "RIEM", "NWCF", "TOPO")
+EXTRA = ("RIEM_T",)          # later feature variants, loaded when present in the cache
 TASKS = ("nback", "matb")
 
 
@@ -38,7 +39,7 @@ def load(sid):
     for ses in ("S1", "S2", "S3"):
         d = pickle.load(open(CACHE / f"F01_sub-{sid:02d}_{ses}.pkl", "rb"))
         m = d["meta"]
-        feats = {f: d[f].copy() for f in FAMILIES}
+        feats = {f: d[f].copy() for f in FAMILIES + tuple(k for k in EXTRA if k in d)}
         feats["ALL"] = np.hstack([feats[f] for f in FAMILIES])
         for t in TASKS:
             ix = (m.task == t).to_numpy()

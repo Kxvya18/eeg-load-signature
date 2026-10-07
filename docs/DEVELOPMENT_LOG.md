@@ -82,3 +82,13 @@ AUC (subject-only LR / pooled LR / pooled LDA / minimax / minimax+time-null):
   -> The M01 gain over B_POOL came from the shared low-rank (PCA) representation + population pooling, NOT from
      the minimax rule. Minimax is not superior to a properly regularised pooled decoder. Method claim withdrawn;
      the real effect is population pooling in a shared low-rank space (AUC .64/.71 subject-only -> .74/.89).
+
+## 2026-10-07 — M03 hierarchical/ordinal, M04 task-centring + balanced self-training, M05 similarity pooling
+Bar re-established: pooled PCA-LR (RIEM, K=100) AUC .740 matb->nback / .894 nback->matb.
+- M03 hierarchical shared+task+subject (Evgeniou-Pontil augmentation): worse (-.070 / -.020); ordinal versions worse;
+  flat pooled ordinal +.001 / +.005 (n.s.). Dropped.
+- M04 RIEM_T (re-centring per session x task): +.002 / -.005 (n.s.). Dropped.
+- M04 balanced self-training (BST; level-balanced design as a label-proportion prior, 3 rounds, pseudo weight =
+  own-data weight): +.012 (9/11, p=.019) / +.008 (11/11, p=.001). First consistent win; effect small.
+- M05 similarity-weighted pooling: source-task similarity does NOT predict unseen-task transfer (Spearman .071 /
+  -.036); SWP hurts (-.053 / -.029). Dropped. (Finding: inter-individual similarity is task-specific.)

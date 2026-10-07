@@ -70,3 +70,15 @@ AUC (subject-only LR / pooled LR / pooled LDA / minimax / minimax+time-null):
   remains (e.g. -0.10 nback->matb) and costs ~0.03 AUC -> secondary component.
 - Certificate problem: convex-hull margin 2.5-2.7 vs realised 1.1-1.3 on the test subject -> the hull assumption
   does not hold for new people. Fix: conformal (leave-one-subject-out) calibration of the certificate (M02).
+
+## 2026-10-07 — M02 conformal certificate, K sensitivity, B10 competitors (RIEM, K=100, dev N=11)
+- M02: subject-level split-conformal certificate has valid coverage (0.909 >= 0.90) but is VACUOUS
+  (conformal bound -0.7 / -0.3 RIEM; -0.6 / -0.1 ALL_noNWCF): between-subject variability with n=10 calibration
+  subjects forces the worst-case quantile. Not claimable as an informative guarantee.
+- K sensitivity (minimax RIEM AUC matb->nback / nback->matb): K50 .750/.862, K100 .750/.857, K200 .740/.852.
+- B10 competitors (AUC): matb->nback  CORAL .642  GDRO .699  PCA_LR .740  MM .750
+                         nback->matb  CORAL .748  GDRO .870  PCA_LR .894  MM .857
+  Paired Wilcoxon MM vs PCA_LR: +.010 (6/11, p=.77) and -.036 (1/11, p=.005).
+  -> The M01 gain over B_POOL came from the shared low-rank (PCA) representation + population pooling, NOT from
+     the minimax rule. Minimax is not superior to a properly regularised pooled decoder. Method claim withdrawn;
+     the real effect is population pooling in a shared low-rank space (AUC .64/.71 subject-only -> .74/.89).

@@ -44,3 +44,17 @@ Consequences for design:
   (theta/alpha/beta re-centred tangent space), NWCF (frozen v3.1 descriptors, M58, aec_orth+wpli, 3 bands,
   unchanged), TOPO (classical Rips/graph/clique from the same cache).
 - V01: fast aperiodic fit vs specparam 2.0 (fixed mode), n=360 channel-windows: offset r=0.925, exponent r=0.950.
+
+## 2026-10-07 — X10 cross-task baselines (dev N=11; low vs high training, AUC on unseen task; C=0.1 fixed)
+| setting | BP | APER | OSC | RIEM | NWCF | TOPO | ALL |
+|---|---|---|---|---|---|---|---|
+| same task, S1+S2->S3, MATB | .909 | .882 | .841 | .963 | .676 | .608 | .971 |
+| same task, S1+S2->S3, N-back | .788 | .662 | .720 | .828 | .622 | .613 | .854 |
+| cross task, S1+S2->S3, N-back->MATB | .564 | .582 | .575 | .713 | .514 | .482 | .708 |
+| cross task, S1+S2->S3, MATB->N-back | .669 | .629 | .637 | .635 | .550 | .529 | .683 |
+| cross task, same session, N-back->MATB | .641 | .580 | .614 | .583 | .511 | .527 | .590 |
+| cross task, same session, MATB->N-back | .617 | .584 | .632 | .595 | .528 | .515 | .607 |
+- Task-specificity confirmed: AUC 0.83-0.97 within task -> 0.51-0.71 across tasks. Room for a task-general method.
+- NWCF (frozen) and classical topology are weak for load (0.61-0.68 within task, ~chance across tasks).
+- Time leakage (Spearman of score with time-on-task within level) is small and negative (-0.01 to -0.16),
+  largest for RIEM/ALL within MATB: decoder outputs drift down with time-on-task.

@@ -1,0 +1,1 @@
+n=360  offset r=0.925 median|d|=0.100  exponent r=0.950 median|d|=0.074

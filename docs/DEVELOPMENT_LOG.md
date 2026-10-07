@@ -36,3 +36,11 @@ Consequences for design:
 - Novel element must be the method: joint identifiable decomposition {task-general load, task-specific load, time-on-task,
   session} with a worst-case (max-min over tasks) objective; evaluated leave-one-task-out x cross-session.
 - NWCF competes as the network-topology family against the 2023 topological-FC workload method.
+
+## 2026-10-07 — feature families (F01) and validation (V01)
+- Task order per session from notebook.mat (codes 3/4/5 = 2/1/0-back, 6/7/8 = MATB easy/med/diff); order is
+  pseudorandomised per subject x session -> load level and time-on-task (slot) are separable by design.
+- F01 families on identical 4-s windows: BP, APER (robust log-log 1/f fit), OSC (power above 1/f), RIEM
+  (theta/alpha/beta re-centred tangent space), NWCF (frozen v3.1 descriptors, M58, aec_orth+wpli, 3 bands,
+  unchanged), TOPO (classical Rips/graph/clique from the same cache).
+- V01: fast aperiodic fit vs specparam 2.0 (fixed mode), n=360 channel-windows: offset r=0.925, exponent r=0.950.

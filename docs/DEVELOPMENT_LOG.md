@@ -92,3 +92,8 @@ Bar re-established: pooled PCA-LR (RIEM, K=100) AUC .740 matb->nback / .894 nbac
   own-data weight): +.012 (9/11, p=.019) / +.008 (11/11, p=.001). First consistent win; effect small.
 - M05 similarity-weighted pooling: source-task similarity does NOT predict unseen-task transfer (Spearman .071 /
   -.036); SWP hurts (-.053 / -.029). Dropped. (Finding: inter-individual similarity is task-specific.)
+- M04 feature check with BST: RIEM best (BST .752/.901); ALL_noNWCF .726/.901; BP .721/.831. Keep RIEM.
+- B20 deep baselines (EEGNet-8,2, ShallowConvNet; pooled population + own source task, identical scenario) launched.
+Framing note: "PCA_LR" (pooled, shared low-rank RIEM) is an ablation of our own pipeline, not a published
+baseline. Published/external comparators: subject-only LR, pooled LR on full features, CORAL, Group-DRO (same
+low-rank space), EEGNet, ShallowConvNet. Component justification requires the full method to beat its ablations too.

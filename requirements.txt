@@ -1,12 +1,7 @@
 numpy
-pandas
 scipy
+pandas
 scikit-learn
-matplotlib
-seaborn
-networkx
-mne
-asrpy
+joblib
 ripser
-tqdm
-Pillow
+numba

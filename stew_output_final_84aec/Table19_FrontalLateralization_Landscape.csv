@@ -1,2 +1,0 @@
-Scope,Target,Feature,N_pairs,Rest_median,Task_median,W,p_raw,RBC_signed,Effect_size,Direction,RBC_CI_lower,RBC_CI_upper,p_FDR,Sig,Sig_raw,p_perm,Min_detectable_RBC,Observed_vs_MDR
-lateralization,F_right_minus_left,LAT_F_median_landscape_total_area_H1,40,-0.0001144072723275,0.000141642809864,317.0,0.2162961354260915,-0.6134146341463415,Large,Task > Rest,-0.7804878048780488,-0.501219512195122,0.2162961354260915,ns,ns,0.2182,0.3082795696761714,1.9897998261470764

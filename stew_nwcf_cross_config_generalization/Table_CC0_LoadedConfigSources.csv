@@ -1,7 +1,0 @@
-config,status,folder,source_csv,n_rows,n_subjects,n_nwcf_features
-123plv,loaded,/Users/boolu/Desktop/simulations/ALL PROJECTS/stew/stew_output_123plv,/Users/boolu/Desktop/simulations/ALL PROJECTS/stew/stew_output_123plv/advanced_topology_features.csv,80,40,891
-254aec,loaded,/Users/boolu/Desktop/simulations/ALL PROJECTS/stew/stew_output_254aec,/Users/boolu/Desktop/simulations/ALL PROJECTS/stew/stew_output_254aec/advanced_topology_features.csv,80,40,891
-83aec,loaded,/Users/boolu/Desktop/simulations/ALL PROJECTS/stew/stew_output_83aec,/Users/boolu/Desktop/simulations/ALL PROJECTS/stew/stew_output_83aec/advanced_topology_features.csv,80,40,891
-84aec,loaded,/Users/boolu/Desktop/simulations/ALL PROJECTS/stew/stew_output_84aec,/Users/boolu/Desktop/simulations/ALL PROJECTS/stew/stew_output_84aec/advanced_topology_features.csv,80,40,891
-84corr,loaded,/Users/boolu/Desktop/simulations/ALL PROJECTS/stew/stew_output_84corr,/Users/boolu/Desktop/simulations/ALL PROJECTS/stew/stew_output_84corr/advanced_topology_features.csv,80,40,894
-84plv,loaded,/Users/boolu/Desktop/simulations/ALL PROJECTS/stew/stew_output_84plv,/Users/boolu/Desktop/simulations/ALL PROJECTS/stew/stew_output_84plv/advanced_topology_features.csv,80,40,894

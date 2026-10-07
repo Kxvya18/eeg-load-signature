@@ -1,22 +1,15 @@
-__pycache__/
-*.pyc
-.DS_Store
-.ipynb_checkpoints/
-.env
-venv/
-.venv/
-*.log
-*.pdf
-.mplconfig/
-.numba_cache/
-STEW Dataset/
-data/
-datasets/
-raw_data/
-*.edf
-*.fif
-*.set
-*.mat
-*.npy
+# data and large artefacts never go to the repository
 *.npz
-stew_tda_results*/
+*.npy
+*.mat
+*.fif
+*.edf
+*.zip
+cache/
+data/
+raw/
+derivatives/
+__pycache__/
+.DS_Store
+._*
+*.log

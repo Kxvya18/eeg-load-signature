@@ -1,7 +1,0 @@
-Scope,Model,N_subjects,N_samples,Accuracy,Accuracy_pct,Balanced_accuracy,Balanced_accuracy_pct,ROC_AUC,Sensitivity_task,Specificity_rest,TN_rest,FP_rest_as_task,FN_task_as_rest,TP_task,Perm_p,Sig
-confirmatory_frontal,Topology only,40,80,0.6,60.0%,0.6000000000000001,60.0%,0.6868749999999999,0.65,0.55,22,18,14,26,0.088,†
-confirmatory_frontal,Alpha only,40,80,0.625,62.5%,0.625,62.5%,0.6468750000000001,0.625,0.625,25,15,15,25,0.0005,***
-confirmatory_frontal,Combined,40,80,0.5875,58.8%,0.5875,58.8%,0.665,0.65,0.525,21,19,14,26,0.124,ns
-whole_head,Topology only,40,80,0.725,72.5%,0.7250000000000001,72.5%,0.79875,0.775,0.675,27,13,9,31,0.002,**
-whole_head,Alpha only,40,80,0.825,82.5%,0.825,82.5%,0.865625,0.8,0.85,34,6,8,32,0.0,***
-whole_head,Combined,40,80,0.8375,83.8%,0.8375,83.8%,0.9106249999999999,0.875,0.8,32,8,5,35,0.0,***

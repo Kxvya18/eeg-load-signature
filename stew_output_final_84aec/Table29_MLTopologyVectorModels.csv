@@ -1,6 +1,0 @@
-Vector_family,N_subjects,N_samples,N_raw_vector_features,PCA_components_inside_LOSO,Accuracy,Accuracy_pct,Balanced_accuracy,Balanced_accuracy_pct,ROC_AUC,Sensitivity_task,Specificity_rest,TN_rest,FP_rest_as_task,FN_task_as_rest,TP_task,Balanced_perm_p,Sig
-Frontal channel landscapes,40,80,1152,10,0.4625,46.2%,0.4625,46.2%,0.46187500000000004,0.5,0.425,17,23,20,20,0.714,ns
-Frontal channel persistence images,40,80,2400,10,0.55,55.0%,0.55,55.0%,0.614375,0.725,0.375,15,25,11,29,0.242,ns
-Frontal FC landscape,40,80,192,10,0.5625,56.2%,0.5625,56.2%,0.55,0.775,0.35,14,26,9,31,0.228,ns
-Frontal FC persistence image,40,80,400,10,0.6125,61.3%,0.6125,61.3%,0.64,0.875,0.35,14,26,5,35,0.076,†
-Combined frontal topology vectors,40,80,1344,10,0.45,45.0%,0.45,45.0%,0.48812500000000003,0.5,0.4,16,24,20,20,0.756,ns

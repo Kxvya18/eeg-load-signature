@@ -97,3 +97,10 @@ Bar re-established: pooled PCA-LR (RIEM, K=100) AUC .740 matb->nback / .894 nbac
 Framing note: "PCA_LR" (pooled, shared low-rank RIEM) is an ablation of our own pipeline, not a published
 baseline. Published/external comparators: subject-only LR, pooled LR on full features, CORAL, Group-DRO (same
 low-rank space), EEGNet, ShallowConvNet. Component justification requires the full method to beat its ablations too.
+
+## 2026-10-08 — M06 transductive subspace; partial deep baselines
+- M06: fitting the shared PCA on training + unlabeled test windows HURTS (TPCA_LR -.065 / -.032; TPCA_BST
+  -.100 / -.001): the dominant unlabeled variance in the new task is block/time structure, not load. Dropped.
+- B20 EEGNet partial (9/22 fits; ~40 min/fit on MPS with macOS "Impacting Interactivity" GPU watchdog errors):
+  same subjects EEGNet vs ours (BST[RIEM]): nback->matb .770 vs .932 (n=5), matb->nback .528 vs .663 (n=4);
+  ours better in 8/9. ShallowConvNet started in parallel on CPU.

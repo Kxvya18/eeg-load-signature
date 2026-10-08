@@ -104,3 +104,8 @@ low-rank space), EEGNet, ShallowConvNet. Component justification requires the fu
 - B20 EEGNet partial (9/22 fits; ~40 min/fit on MPS with macOS "Impacting Interactivity" GPU watchdog errors):
   same subjects EEGNet vs ours (BST[RIEM]): nback->matb .770 vs .932 (n=5), matb->nback .528 vs .663 (n=4);
   ours better in 8/9. ShallowConvNet started in parallel on CPU.
+- M07 BST sensitivity (gain over PCA_LR, matb->nback / nback->matb, wins/11): positive in all 7 settings;
+  R 1/3/5: +.009/.006, +.012/.008, +.012/.008; q .20/.33/.45: +.009/.005, +.012/.008, +.011/.005;
+  weight x0.5/1/2: +.006/.004, +.012/.008, +.021/.014; wins 9-10/11 and 10-11/11 throughout.
+  Gain grows with pseudo-label weight; any change of the default must be fixed in the pre-registration
+  before the sealed test (dev-chosen).
